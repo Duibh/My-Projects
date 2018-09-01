@@ -35,7 +35,6 @@ read -p "Weight: " weightSecond
 weightedGradeOne=$(bc<<<"scale=1; $gradeOne*$weightFirst")
 weightedGradeTwo=$(bc<<<"scale=1; $gradeTwo*$weightSecond")
 average=$(bc<<<"scale=1; $weightedGradeOne+$weightedGradeTwo")
-
 sqlite3 grades.db << EOF
 create table if not exists GradesCsbe (Module integer, FirstGrade real, SecondGrade real, Average real);
 insert into GradesCsbe (Module, FirstGrade, SecondGrade, Average) values ("$modul", "$gradeOne", "$gradeTwo", "$average");
@@ -80,4 +79,5 @@ EOF
 echo; read -p "Continue with random key..."
 Intro
 }
+
 Intro
