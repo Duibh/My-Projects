@@ -13,11 +13,11 @@ class Calculator{
 
     public static void resultingOutput(){
 	System.out.println("\nFirst number: " + numOne + "\nSecond number: " + numTwo + "\nResult: " + result + "\n");
-	clearAndWait();
+	waitAndClear();
     }
 
 
-    public static void clearAndWait(){
+    public static void waitAndClear(){
 	Scanner s = new Scanner(System.in);
 	System.out.println("\nPress enter to continue...");
 	s.nextLine();
@@ -33,7 +33,7 @@ class Calculator{
 	}
 	catch (Exception e) {
 	    System.out.println("\nError: Invalid input! Try again.");
-	    clearAndWait();
+	    waitAndClear();
 	}
 	if (choice == 5){
 	    System.out.println("\nGood Bye.");
@@ -67,7 +67,7 @@ class Calculator{
 		    }
 		default:
 		    System.out.println("\nError: Invalid input! Try again.");
-		    clearAndWait();
+		    waitAndClear();
 	    }
 	}
     }
